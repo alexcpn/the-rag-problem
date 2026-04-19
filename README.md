@@ -85,7 +85,7 @@ Answer: "...Produce: fruits and vegetables / Dairy: milk, yogurt, cheese /
 Grains: rice, pasta, flour / Proteins: beans, eggs, chicken, or tofu..."
 ```
 
-The reranker is happy. The top score is **+2.45**, which looks like a perfectly healthy positive match. The retrieval metrics look fine. And the answer is **confidently wrong for this household**: it recommends dairy to a lactose-intolerant family.
+The reranker is happy. The top score is **+2.45**, which looks like a perfectly healthy positive match. The retrieval metrics look fine. And the answer seems reasonable at first glance. But it is not what would actually help this user. It sounds more like a generic assistant response than one grounded in the user's real context.
 
 The stack executed exactly as designed. It still failed, because it was optimizing *query ↔ doc* relevance when the user actually needed *query ↔ user-context ↔ doc* relevance.
 
